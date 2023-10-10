@@ -70,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">439</span>
+            <span class="post-count">523</span>
         </span>
     </span>
 
@@ -79,7 +79,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -109,8 +109,9 @@
 <li>首先这里要创建的仓库名一定为个人的gitee账号名：<br><img src="/img_13.png" alt="img_13.png"><br>小细节，这两行要配置成功的，如果配置过请忽略：<br><img src="/img_14.png" alt="img_14.png"></li>
 <li>把 blog&#x2F;_config.yml 的文件最底部配置改动一下：<br><img src="/img_15.png" alt="img_15.png"><br>变为：<br><img src="/img_17.png" alt="img_17.png"></li>
 <li>blog目录下安装包： cnpm hexo-deployer-git –save，试过了yarn add, 不行,npm 会卡住 (淘宝镜像配置：sudo npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a>)</li>
-<li>并输入命令 hexo g (生成网页内容)，hexo d (部署博客)</li>
-<li>等待部署完成，查看gitee仓库有无代码被提交（如下），去把此仓库开源</li>
+<li>并输入命令 hexo g (生成网页内容)，hexo d (部署博客)<br>这里可能会有小插曲说权限不够：<br><img src="/image.png" alt="Alt text"><br>报错：<code>Please make sure you have the correct access rights and the repository exists.</code><br>解决方案是配置gitee公钥ssh,亲测有效：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43751336/article/details/109096331">https://blog.csdn.net/qq_43751336/article/details/109096331</a></li>
+<li>等待部署完成，查看gitee仓库有无代码被提交（如下）就可以看到自动生成的代码库了<br><img src="/image-1.png" alt="Alt text"></li>
+<li>最后将该项目公开，按照下面操作<br><img src="/image-2.png" alt="Alt text"><br><img src="/image-4.png" alt="Alt text"><br><img src="/image-5.png" alt="Alt text"><br>（注意这里会要求实名认证的）</li>
 </ul>
  
       <!-- reward -->
