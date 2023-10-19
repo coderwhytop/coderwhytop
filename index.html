@@ -305,6 +305,15 @@
 <li>最后将该项目公开，按照下面操作<br><img src="/image-2.png" alt="Alt text"><br><img src="/image-4.png" alt="Alt text"><br><img src="/image-5.png" alt="Alt text"><br>（注意这里会要求实名认证的, 认证成功就可以发布了）<br><img src="/image-6.png" alt="Alt text"></li>
 <li>最后，如果你想要配置github为地址，也是一样的配置ssh，这里不做演示了：<br><img src="/image-7.png" alt="Alt text"></li>
 </ul>
+<h2 id="购买阿里云服务器-1核-1G内存-40g存储-1M带宽-15元一周-500一年"><a href="#购买阿里云服务器-1核-1G内存-40g存储-1M带宽-15元一周-500一年" class="headerlink" title="购买阿里云服务器 1核 1G内存 40g存储 1M带宽 15元一周 500一年"></a>购买阿里云服务器 1核 1G内存 40g存储 1M带宽 15元一周 500一年</h2><h3 id="1-服务器账号密码设置（直接在买的时候设置，或者在买之后去控制台里找到服务器实例设置）大小写字母-符号"><a href="#1-服务器账号密码设置（直接在买的时候设置，或者在买之后去控制台里找到服务器实例设置）大小写字母-符号" class="headerlink" title="1. 服务器账号密码设置（直接在买的时候设置，或者在买之后去控制台里找到服务器实例设置）大小写字母+@符号"></a>1. 服务器账号密码设置（直接在买的时候设置，或者在买之后去控制台里找到服务器实例设置）大小写字母+@符号</h3><h3 id="2-使用finallshell（mac—）-或xshell-windows-登录服务器后台"><a href="#2-使用finallshell（mac—）-或xshell-windows-登录服务器后台" class="headerlink" title="2. 使用finallshell（mac—） 或xshell(windows)登录服务器后台"></a>2. 使用finallshell（mac—） 或xshell(windows)登录服务器后台</h3><ul>
+<li>直接从root cd .. 到根目录去创建一个文件夹web，拖进index.html，直接访问公网ip，发现行不通</li>
+<li>我们直接输入ip，默认会访问服务器的80端口，但是我们输入linux命令 <code>netstat -ntlp</code>, 发现80端口并没有程序在运行，所以我们还要安装web服务器软件，提供网站访问能力(nginx)<br><img src="/image-8.png" alt="Alt text"></li>
+<li>linux 提供的软件包管理器，输入 <code>yum --version</code>初始化管理器命令，再输入 yum install nginx </li>
+<li>再输入 <code>nginx</code>, 启动nginx服务，再<code>netstat -ntlp</code> 发现80端口被nignx启动了(访问公网ip是有了nginx的默认页面)</li>
+<li>我们可以试下再次访问公网&#x2F;web的站点(新版nginx不支持了，只支持访问nginx提供的特定的服务目录访问)</li>
+<li>不过我们最好在nginx提供的网站服务目录下存放，<code> cd /etc/nginx &amp; vim nginx.conf</code> 表示找到查看nginx的配置文件修改默认的root地址: (&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html改掉)<br><img src="/image-9.png" alt="Alt text"></li>
+<li>接下来就是把网站资源存放到这个目录地址下就可以了</li>
+</ul>
  
       <!-- reward -->
       
